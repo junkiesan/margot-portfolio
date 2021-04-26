@@ -3,11 +3,19 @@ body {
 }
 
 .hero-section {
-  background-color: brown;
-  height: 100px;
-  width: 100%;
+
+}
+
+.row {
+  display: flex;
 }
 
 .container {
   width: 20%;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
