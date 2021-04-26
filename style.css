@@ -1,5 +1,30 @@
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  width: 60px;
+  margin-top: -20px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 .row {
@@ -9,6 +34,8 @@ body {
 .container {
   width: 20%;
   position: relative;
+  transition: transform 500ms;
+  display: block;
 }
 
 .container img {
@@ -16,8 +43,8 @@ body {
   height: 300px;
   opacity: 1;
   object-fit: cover;
-  transition: .5s ease-in-out;
-}
+  display: block;
+ }
 
 .row .container:focus,
 .row .container:hover {
@@ -35,6 +62,7 @@ body {
   width: 50%;
   height: 50%;
   transform: translate(-50%, -50%);
+  text-align: center; 
 }
 
 .container:hover .middle {
@@ -45,4 +73,47 @@ body {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  width: 100%;
+}
+@media only screen and (max-width: 1500px) {
+  .text {
+    font-size: 10px;
+    padding: 32px 16px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .extra-item {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .row .container:focus,
+  .row .container:hover {
+    transform: none;
+    z-index: 1;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .text {
+    font-size: 32px;
+    padding: 32px 16px;
+  }
 }
